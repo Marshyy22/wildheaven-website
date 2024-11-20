@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wildheaven campers</title>
+<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1776/1776945.png"type="image/x-icon">  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            background-image: url('https://png.pngtree.com/background/20230612/original/pngtree-fairy-tale-forest-beautiful-wallpapers-picture-image_3178425.jpg'); /* Background image */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+   /* Navigation Bar */
+nav {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+    position: relative; /* For pseudo-element positioning */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 0; /* Add some padding for better click area */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+nav ul li a:hover {
+    color: #9c640c; /* Change text color on hover */
+}
+
+/* Adding a pseudo-element for underline effect */
+nav ul li a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background: #9c640c;  /* Color of the underline */
+    width: 0; /* Start with width 0 */
+    transition: width 0.3s ease; /* Smooth width transition */
+    position: absolute;
+    left: 50%;
+    bottom: -5px; /* Position it below the text */
+    transform: translateX(-50%); /* Center the underline */
+}
+
+nav ul li a:hover::after {
+    width: 100%; /* Expand to full width on hover */
+}
+
+        /* Main Content */
+        .content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 100px 50px 50px 50px;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .description {
+            max-width: 600px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+.button {
+    display: inline-block; /* Make it an inline block */
+    padding: 10px 20px; /* Padding for the button */
+    background-color: #9c640c; /* Background color */
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Bold text */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    margin-top: 20px; /* Space above the button */
+    margin-bottom: 20px;
+}
+.but {
+    display: inline-block; /* Make it an inline block */
+    padding: 10px 20px; /* Padding for the button */
+    background-color: #9c640c; /* Background color */
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Bold text */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    margin-top: 110px; /* Space above the button */
+    margin-bottom: 20px;
+}
+
+.button:hover {
+    background-color: #dc7633; /* Darker pink on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+.login-icon {
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Center vertically */
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    margin-left: 20px; /* Space from other items */
+}
+
+.login-icon i {
+    margin-right: 2px; /* Space between icon and text */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.login-icon:hover i {
+    color: #9c640c; /* Change icon color on hover */
+}
+.image-gallery {
+    text-align: center; /* Center the text */
+    padding: 40px 20px; /* Padding for the section */
+    background: rgba(0, 0, 0, 0.5);	
+}
+
+.image-gallery h2 {
+    color: #9c640c; /* Heading color */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.gallery {
+    display: flex; /* Flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: center; /* Center the images */
+    gap: 15px; /* Space between images */
+}
+
+.gallery img {
+    width: 300px; /* Set a fixed width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+    transition: transform 0.3s ease; /* Smooth scaling effect */
+}
+
+.gallery img:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+    </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+	<li><a href="#login"class="login-icon"><i class="fas fa-sign-in-alt"></i> Login</a></li> <!-- Login Icon -->
+    </ul>
+</nav>
+
+<!-- Main Content -->
+<div class="content">
+    <div class="description">
+        <h1>Welcome to WildHeaven campers</h1>
+        <p>"Discover the wild, embrace the haven—WildHaven Campers is your gateway to unforgettable adventures under the stars.".</p>
+    <a href="#start" class="button">Your Journey begins Here</a> <!-- Button added here -->
+</div>
+</div>
+<div class="image-gallery">
+<a href="#start" class="but">Explore More</a> <!-- Button added here -->
+    <div class="gallery">
+        <img src="https://roadtripmotorhomes.co.uk/uploads/2024/10/transform-your-camping-adventure-into-a-luxurious-retreat.webp">
+        <img src="https://t4.ftcdn.net/jpg/09/28/06/21/360_F_928062106_JaRixhdlbt06vdB7HUj3B7Hk3ytIt1sp.jpg">
+        <img src="https://img.freepik.com/premium-photo/nighttime-camping-adventure-illuminated-mountain-range_198067-950402.jpg">
+        <img src="https://t4.ftcdn.net/jpg/07/14/80/41/360_F_714804168_pVCUZFBKxzayAe6dVqEwy4RrToJBTgfp.jpg">
+        <img src="https://media.timeout.com/images/105658195/image.jpg">
+	<img src="https://static.wixstatic.com/media/9a8d4c_04d0241426ee4c9cb227a103c4a9eec2~mv2_d_4608_2592_s_4_2.jpg/v1/fill/w_560,h_420,al_c,q_80,usm_1.20_1.00_0.01,enc_auto/9a8d4c_04d0241426ee4c9cb227a103c4a9eec2~mv2_d_4608_2592_s_4_2.jpg">
+    </div>
+</div>
+
+   
+
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 wildheaven campers</p>
+    <p>Contact: <a href="mailto:info@example.com">wildheavencampers.com</a></p>
+</footer>
+
+</body>
+</html>
